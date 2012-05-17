@@ -43,7 +43,11 @@ dustBase = Dust.makeBase
     else
       return chunk.write ""
 
+exports.buildDust = (templateString, name) ->
+  return Dust.compile templateString, name
+
 cachedDustTemplates = {}
+
 exports.dust = (templateString, data, callback) ->
   id = sha1 templateString
   unless cachedDustTemplates[""+id]
