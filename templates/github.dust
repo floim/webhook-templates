@@ -1,0 +1,12 @@
+{!WebHookTemplate
+  Name:   GitHub
+  Author: Benjie Gillam
+  See:    http://github.com/
+          http://help.github.com/post-receive-hooks/
+!}
+{#first array=commits}{author.name}{/first} 
+pushed to branch `{#gitbranch ref=ref/}` 
+of [{repository.owner.name}/{repository.name}]({repository.url}){?commits}:{/commits}
+{#commits}
+  {~n}{~s}{~s}- {message} ([`{#gitshorthash hash=id/}`]({url}))
+{/commits}
