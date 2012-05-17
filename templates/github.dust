@@ -4,9 +4,9 @@
   See:    http://github.com/
           http://help.github.com/post-receive-hooks/
 !}
-{#first array=commits}{author.name}{/first} 
+{#last array=commits}{author.name}{/first} 
 pushed to branch `{#gitbranch ref=ref/}` 
 of [{repository.owner.name}/{repository.name}]({repository.url}){?commits}:{/commits}
-{#commits}
+{#reverse array=commits}
   {~n}{~s}{~s}- {message} ([`{#gitshorthash hash=id/}`]({url}))
-{/commits}
+{/reverse}
