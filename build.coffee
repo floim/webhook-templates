@@ -23,11 +23,13 @@ for templateFilename in templates
     output.push code
 output = """
   // Generated #{new Date().toUTCString()}
-  var dust = require('dustjs-linkedin');
-  var templates = {};
+  require('coffee-script');
+  dust = require('./src/dust');
+  module.exports = dust
   var templateNames = [];
-  exports.templates = templates;
-  exports.templateNames = templateNames;
+  var templates = {};
+  module.exports.templateNames = templateNames;
+  module.exports.templates = templates;
 
   """+output.join("\n")
 fs.writeFileSync "#{root}webhook-templates.js", output

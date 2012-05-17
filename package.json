@@ -1,6 +1,7 @@
 {
   "name": "pim-webhook-templates",
   "version": "0.0.1",
+  "main": "webhook-templates.js",
   "dependencies": {
     "coffee-script": "=1.3.3",
     "dustjs-linkedin": "=0.4.0",
