@@ -1,6 +1,7 @@
 fs = require 'fs'
-root = "#{__dirname}/"
+root = "#{__dirname}/../"
 Template = require "#{root}src/template"
+coffee = require 'coffee-script'
 
 templateFolder = "#{root}templates/"
 templates = fs.readdirSync templateFolder
@@ -19,17 +20,23 @@ for templateFilename in templates
     templateString = fs.readFileSync templateFolder+templateFilename, 'utf8'
     output.push "\ntemplateNames.push(#{JSON.stringify name});"
     output.push "templates[#{JSON.stringify name}] = #{JSON.stringify templateString};"
-    code = Template.buildDust templateString, name
+    code = Template.Dust.compile templateString, name
     output.push code
+
+src = coffee.compile fs.readFileSync("#{root}src/template.coffee", 'utf8'), {filename:"template.coffee",bare:true}
+fs.writeFileSync "#{root}lib/template.js", src
 output = """
   // Generated #{new Date().toUTCString()}
-  require('coffee-script');
-  dust = require('./src/dust');
-  module.exports = dust
+  Template = require('./template');
+  dust = Template.Dust
+
+
   var templateNames = [];
   var templates = {};
+
+  module.exports = Template
   module.exports.templateNames = templateNames;
   module.exports.templates = templates;
 
   """+output.join("\n")
-fs.writeFileSync "#{root}webhook-templates.js", output
+fs.writeFileSync "#{root}lib/webhook-templates.js", output

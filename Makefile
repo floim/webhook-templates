@@ -1,9 +1,9 @@
 all: build
 
 test:
-	mocha --compilers coffee:coffee-script
+	mocha --compilers coffee:coffee-script -R spec
 
 build:
-	coffee build.coffee
+	coffee src/build.coffee
 
 .PHONY: test
