@@ -25,8 +25,24 @@ for templateFilename in templates
         if sampleFilename.substr(0,Math.min(sampleFilename.length, name.length+1)) is "#{name}."
           testSamples.push sampleFilename
       it 'should have compiled', ->
-        WebhookTemplates.templateNames.indexOf(name).should.not.be.eql(-1)
-        should.exist WebhookTemplates.templates[name]
+        WebhookTemplates.templateNames.should.include(name)
+        should.exist WebhookTemplates.templateStrings[name]
+        should.exist WebhookTemplates.templateDetails[name]
+      it 'should have valid details', ->
+        details = WebhookTemplates.templateDetails[name]
+        details.name.should.be.a('string')
+        details.author.should.be.a('string')
+        ['JSON','form'].should.include details.format
+        if details.jsonfield
+          details.jsonfield.should.be.a('string')
+        if details.ips
+          details.ips.should.be.an.instanceof(Array)
+          for ip in details.ips
+            ip.should.be.a('string')
+            ip.should.match /^([0-9]{1,3}\.){3}[0-9]{1,3}$/
+        if details.url
+          details.url.should.be.a('string')
+          details.url.should.match /^https?:\/\/[^\/]+/
       it 'should have test(s)', ->
         testSamples.should.not.be.empty
       for testSampleFilename in testSamples
@@ -50,5 +66,5 @@ for templateFilename in templates
                 should.not.exist(err)
                 should.exist(output)
                 output = output.replace /\n$/, ""
-                output.should.eql(expect)
+                output.should.equal(expect)
                 next()
