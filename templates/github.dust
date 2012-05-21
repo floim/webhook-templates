@@ -3,12 +3,24 @@
 , "author"    : "Benjie Gillam (http://www.benjiegillam.com/)"
 , "format"    : "JSON"
 , "jsonfield" : "payload"
-, "ips"       : ["207.97.227.253", "50.57.128.197", "108.171.174.178"]
 , "url"       : "http://help.github.com/post-receive-hooks/"
 }!}
 {#last array=commits}{author.name}{/first}{~s}
 pushed to branch `{#gitbranch ref=ref/}`{~s}
-of [{repository.owner.name}/{repository.name}]({repository.url}){?commits}:{/commits}
-{#reverse array=commits}
-  {~n}{~s}{~s}- {message} ([`{#gitshorthash hash=id/}`]({url}))
-{/reverse}
+of{~s}
+{?repository.url}
+  [{repository.owner.name}/{repository.name}]({repository.url})
+{:else}
+  {repository.name}
+{/repository.url}
+{?commits}
+  :
+  {#reverse array=commits}
+    {~n}{~s}{~s}- {#gitshortmessage message=message/}{~s}
+    {?url}
+      ([`{#gitshorthash hash=id/}`]({url}))
+    {:else}
+      (`{#gitshorthash hash=id/}`)
+    {/url}
+  {/reverse}
+{/commits}

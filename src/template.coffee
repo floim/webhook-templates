@@ -23,6 +23,15 @@ dustBase = Dust.makeBase
     if _.isString params.hash
       return chunk.write params.hash.substr(0,Math.min(7,params.hash.length))
     return chunk
+  gitshortmessage: (chunk, context, bodies, params) ->
+    if _.isString params.message
+      lines = params.message.split /\n/
+      if lines.length > 1
+        return chunk.write lines[0]+" [...]"
+      else
+        return chunk.write lines[0]
+    else
+      return chunk
   first: (chunk, context, bodies, params) ->
     return nth chunk, context, bodies, params, 0
   last: (chunk, context, bodies, params) ->
