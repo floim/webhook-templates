@@ -1,0 +1,96 @@
+{
+    "after": "05a1d134411d26283ef441fad39f57611fb8bd5d", 
+    "before": "0bdf49398efea8af0807921d94c948ab275549c8", 
+    "commits": [
+        {
+            "author": {
+                "email": "jack@metajack.im", 
+                "name": "Jack Moffitt"
+            }, 
+            "id": "4e22b0a2d5f2318ce736f55a79e4df32a61042ed", 
+            "message": "    First version of notifier.", 
+            "timestamp": "2008-12-05T00:42:25-0700", 
+            "url": null
+        }, 
+        {
+            "author": {
+                "email": "jack@metajack.im", 
+                "name": "Jack Moffitt"
+            }, 
+            "id": "976d2cc51e7eaf66079b3b17ea467604b25b5761", 
+            "message": "    Fix parsing to handle medium pretty format instead of headers format.", 
+            "timestamp": "2008-12-05T01:26:31-0700", 
+            "url": null
+        }, 
+        {
+            "author": {
+                "email": "jack@metajack.im", 
+                "name": "Jack Moffitt"
+            }, 
+            "id": "b754fa0e779f5e43ea64b64fea22ca5e87833da1", 
+            "message": "    Added instructions and licensing info.", 
+            "timestamp": "2008-12-05T01:39:37-0700", 
+            "url": null
+        }, 
+        {
+            "author": {
+                "email": "jack@metajack.im", 
+                "name": "Jack Moffitt"
+            }, 
+            "id": "dd1cfb7e67bdb33237c0e147fcadbb35ce99173e", 
+            "message": "    Added note about commitbot.", 
+            "timestamp": "2008-12-05T01:46:01-0700", 
+            "url": null
+        }, 
+        {
+            "author": {
+                "email": "jack@metajack.im", 
+                "name": "Jack Moffitt"
+            }, 
+            "id": "f238c6e5f24d6daa533f514357a5c0f39d3acf63", 
+            "message": "    Fixed author parsing to work in more cases.", 
+            "timestamp": "2008-12-09T14:51:27-0700", 
+            "url": null
+        }, 
+        {
+            "author": {
+                "email": "muness@thinkrelevance.com", 
+                "name": "Muness Alrubaie"
+            }, 
+            "id": "b572cc5f9ba5a5195f2d6b34d33c792cfe8cf382", 
+            "message": "    Git 1.6 change\n    \n    Signed-off-by: Jack Moffitt <metajack@gmail.com>", 
+            "timestamp": "2009-01-17T03:18:26+0800", 
+            "url": null
+        }, 
+        {
+            "author": {
+                "email": "benjie@jemjie.com", 
+                "name": "Benjie Gillam"
+            }, 
+            "id": "05615b79daf8f55bfec6e78d19966161b741b4bc", 
+            "message": "    Read settings from git config/description.\n    \n    We also read the .git/description file.\n    \n    If details are not known (e.g. the setting is unset) then output null.\n    \n    Keys about this repo:\n      meta.url\n      meta.ownername\n      meta.owneremail\n    \n    Key specifying where to POST to:\n      hooks.webhookurl", 
+            "timestamp": "2012-05-21T12:33:46+0100", 
+            "url": null
+        }, 
+        {
+            "author": {
+                "email": "benjie@jemjie.com", 
+                "name": "Benjie Gillam"
+            }, 
+            "id": "05a1d134411d26283ef441fad39f57611fb8bd5d", 
+            "message": "    Reverse commit order, like GitHub does.", 
+            "timestamp": "2012-05-21T13:12:06+0100", 
+            "url": null
+        }
+    ], 
+    "ref": "refs/heads/master", 
+    "repository": {
+        "description": "Unnamed repository; edit this file 'description' to name the repository.\n", 
+        "name": "notify-webhook", 
+        "owner": {
+            "email": "jack@metajack.im", 
+            "name": "Jack Moffitt"
+        }, 
+        "url": null
+    }
+}
