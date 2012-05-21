@@ -1,6 +1,6 @@
 {!WebhookTemplate{
   "name"      : "GitHub"
-, "author"    : "Benjie Gillam http://www.benjiegillam.com/"
+, "author"    : "Benjie Gillam (http://www.benjiegillam.com/)"
 , "format"    : "JSON"
 , "jsonfield" : "payload"
 , "ips"       : ["207.97.227.253", "50.57.128.197", "108.171.174.178"]
