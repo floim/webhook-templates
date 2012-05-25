@@ -1,6 +1,6 @@
 {
   "name": "webhook-templates",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Dust.js templates for webhook payloads",
   "keywords": ["pim", "webhook", "templates", "dust", "dustjs"],
   "homepage": "https://github.com/p-im/webhook-templates",

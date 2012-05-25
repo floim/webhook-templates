@@ -1,5 +1,5 @@
-Benjie Gillam pushed to branch `master` of [p-im/webhook-templates](https://github.com/p-im/webhook-templates):
-  - Merge branch 'github.multiple-commits' ([`bedd4c3`](https://github.com/p-im/webhook-templates/commit/bedd4c3138cf7d00c48bb74db47bec20514cc506))
-  - GitHub example of multiple commits. ([`8a5c90e`](https://github.com/p-im/webhook-templates/commit/8a5c90e5f297b0ac19e8887e4feba51054abc02f))
-  - Display GitHub commits in reverse chronological order. ([`69ac21b`](https://github.com/p-im/webhook-templates/commit/69ac21b1fcf97a87e7aa2cf59d25874f99a617b8))
-  - Reverse and last array helpers. ([`cf43e54`](https://github.com/p-im/webhook-templates/commit/cf43e54323173f0eb040966f827e30c2556c1382))
+**Benjie Gillam** pushed to **master** of **[p-im/webhook-templates](https://github.com/p-im/webhook-templates)**:
+  - Merge branch 'github.multiple-commits' ([bedd4c3](https://github.com/p-im/webhook-templates/commit/bedd4c3138cf7d00c48bb74db47bec20514cc506))
+  - GitHub example of multiple commits. ([8a5c90e](https://github.com/p-im/webhook-templates/commit/8a5c90e5f297b0ac19e8887e4feba51054abc02f))
+  - Display GitHub commits in reverse chronological order. ([69ac21b](https://github.com/p-im/webhook-templates/commit/69ac21b1fcf97a87e7aa2cf59d25874f99a617b8))
+  - Reverse and last array helpers. ([cf43e54](https://github.com/p-im/webhook-templates/commit/cf43e54323173f0eb040966f827e30c2556c1382))

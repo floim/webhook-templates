@@ -1,9 +1,9 @@
-Benjie Gillam pushed to branch `master` of notify-webhook:
-  -     Reverse commit order, like GitHub does. (`05a1d13`)
-  -     Read settings from git config/description. [...] (`05615b7`)
-  -     Git 1.6 change [...] (`b572cc5`)
-  -     Fixed author parsing to work in more cases. (`f238c6e`)
-  -     Added note about commitbot. (`dd1cfb7`)
-  -     Added instructions and licensing info. (`b754fa0`)
-  -     Fix parsing to handle medium pretty format instead of headers format. (`976d2cc`)
-  -     First version of notifier. (`4e22b0a`)
+**Benjie Gillam** pushed to **master** of **notify-webhook**:
+  -     Reverse commit order, like GitHub does. (05a1d13)
+  -     Read settings from git config/description. [...] (05615b7)
+  -     Git 1.6 change [...] (b572cc5)
+  -     Fixed author parsing to work in more cases. (f238c6e)
+  -     Added note about commitbot. (dd1cfb7)
+  -     Added instructions and licensing info. (b754fa0)
+  -     Fix parsing to handle medium pretty format instead of headers format. (976d2cc)
+  -     First version of notifier. (4e22b0a)

@@ -5,22 +5,22 @@
 , "jsonfield" : "payload"
 , "url"       : "http://help.github.com/post-receive-hooks/"
 }!}
-{#last array=commits}{author.name}{/first}{~s}
-pushed to branch `{#gitbranch ref=ref/}`{~s}
-of{~s}
+**{#last array=commits}{author.name}{/first}**{~s}
+pushed to **{#gitbranch ref=ref/}**{~s}
+of{~s}**
 {?repository.url}
   [{repository.owner.name}/{repository.name}]({repository.url})
 {:else}
   {repository.name}
-{/repository.url}
+{/repository.url}**
 {?commits}
   :
   {#reverse array=commits}
     {~n}{~s}{~s}- {#gitshortmessage message=message/}{~s}
     {?url}
-      ([`{#gitshorthash hash=id/}`]({url}))
+      ([{#gitshorthash hash=id/}]({url}))
     {:else}
-      (`{#gitshorthash hash=id/}`)
+      ({#gitshorthash hash=id/})
     {/url}
   {/reverse}
 {/commits}
