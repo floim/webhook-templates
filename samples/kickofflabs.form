@@ -1,0 +1,1 @@
+action=new_subscription&email=test@p.im&influence[direct]=0&influence[indirect]=0&opted_out=0&parent_id=&social_id=ABCD&social_url=http://a.p.im/t?kid=ABCD&unsubscribe_url[default]=http://a.p.im/t/opt_out/8460/8e08xxxxxxxxxxxxxxd8&unsubscribe_url[safe]=http://pim-2.kickofflabs.com/opt_out/8460/8e08xxxxxxxxxxxxxxd8&url=http://a.p.im/t

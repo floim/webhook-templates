@@ -1,0 +1,7 @@
+{!WebhookTemplate{
+  "name"      : "KickoffLabs"
+, "author"    : "Benjie Gillam (http://www.benjiegillam.com/)"
+, "format"    : "form"
+, "url"       : "http://help.github.com/post-receive-hooks/"
+}!}
+*{action}* from *[{url}]({url})*: **[{email}](mailto:{email})**
