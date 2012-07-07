@@ -1,6 +1,7 @@
 fs = require 'fs'
 root = "#{__dirname}/../"
 should = require 'should'
+querystring = require 'querystring'
 Template = require "#{root}src/template"
 
 templateFolder = "#{root}templates/"
@@ -48,10 +49,15 @@ for templateFilename in templates
       for testSampleFilename in testSamples
         do (testSampleFilename) ->
           describe "test #{testSampleFilename}", ->
-            sampleJSON = fs.readFileSync sampleFolder + testSampleFilename, 'utf8'
+            sampleData = fs.readFileSync sampleFolder + testSampleFilename, 'utf8'
             data = null
             it "should be valid", ->
-              data = JSON.parse sampleJSON
+              if testSampleFilename.match /\.json$/
+                data = JSON.parse sampleData
+              else if testSampleFilename.match /\.form$/
+                data = querystring.parse sampleData.replace(/\s*$/,"")
+              else
+                throw new Error "Unknown type"
             expect = null
             try
               expect = fs.readFileSync expectFolder + testSampleFilename + ".txt", 'utf8'
